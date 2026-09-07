@@ -1,3 +1,4 @@
+import streamlit as st
 import re
 import random
 from difflib import SequenceMatcher
@@ -502,66 +503,15 @@ def get_response(message):
 
 
 # ============================================================
-# RUN CHATBOT
+
 # ============================================================
-
-if __name__ == "__main__":
-
-    print("=" * 50)
-    print("       COLLEGE CONFESSION ASSISTANT")
-    print("=" * 50)
-
-    print("Hello! 👋")
-    print("I can help you with the confession website.")
-    print("Type 'exit' to close the chatbot.\n")
-
-
-    while True:
-
-        user_message = input("You: ")
-
-
-        # ---------------------------------------------
-        # Exit command
-        # ---------------------------------------------
-
-        if clean_text(user_message) in [
-            "exit",
-            "quit",
-            "bye",
-            "goodbye"
-        ]:
-
-            print("Bot: Goodbye! 👋 Have a great day!")
-
-            break
-
-
-        # ---------------------------------------------
-        # Empty input
-        # ---------------------------------------------
-
-        if user_message.strip() == "":
-
-            print("Bot: Please type something so I can help you. 😊")
-
-            continue
-
-
-        # ---------------------------------------------
-        # Generate response
-        # ---------------------------------------------
-
-        response = get_response(user_message)
-
-        print("Bot:", response)
-        print()
-
-        import streamlit as st
+# STREAMLIT WEB APP
+# ============================================================
 
 st.set_page_config(
     page_title="College Confession Assistant",
-    page_icon="💬"
+    page_icon="💬",
+    layout="centered"
 )
 
 st.title("💬 College Confession Assistant")
@@ -580,8 +530,7 @@ for message in st.session_state.messages:
 user_message = st.chat_input("Type your message...")
 
 if user_message:
-
-    # Show user message
+    # Save and display user message
     st.session_state.messages.append({
         "role": "user",
         "content": user_message
@@ -590,10 +539,9 @@ if user_message:
     with st.chat_message("user"):
         st.write(user_message)
 
-    # Generate bot response
+    # Generate and display bot response
     response = get_response(user_message)
 
-    # Show bot response
     st.session_state.messages.append({
         "role": "assistant",
         "content": response
