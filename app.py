@@ -214,6 +214,57 @@ INTENTS = {
 
 
     # --------------------------------------------------------
+# SAFETY / SECURITY
+# --------------------------------------------------------
+
+"safety": {
+    "keywords": [
+        "safe",
+        "safety",
+        "secure",
+        "security",
+        "trust",
+        "trusted",
+        "protect",
+        "protected",
+        "risk",
+        "privacy",
+        "identity"
+    ],
+
+    "examples": [
+        "is this safe",
+        "is this website safe",
+        "is the confession page safe",
+        "is it safe to post",
+        "is it safe to post a confession",
+        "can I trust this website",
+        "is this website trustworthy",
+        "is my confession safe",
+        "are my confessions safe",
+        "is my identity protected",
+        "will my identity be safe",
+        "is my information safe",
+        "is my information secure",
+        "can someone find out who posted",
+        "will anyone know who posted",
+        "can people see my identity",
+        "is this platform secure"
+    ],
+
+    "responses": [
+        "Your privacy is important. 🔒 However, you should avoid sharing personal information such as your phone number, password, address, or other sensitive details in a confession.",
+
+        "The page is designed to let students share confessions privately. 🔒 Still, avoid including personal or sensitive information in your posts.",
+
+        "You should be careful about what you share online. 😊 Don't include passwords, phone numbers, addresses, or other information that could identify or put you at risk.",
+
+        "For your safety, keep your confession free of sensitive personal information. If the website provides anonymity, your identity should not be publicly displayed, but no online platform should be treated as completely risk-free."
+    ]
+},
+
+
+    # --------------------------------------------------------
     # HELP
     # --------------------------------------------------------
 
