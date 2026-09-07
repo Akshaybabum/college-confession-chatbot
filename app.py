@@ -5,7 +5,7 @@ from difflib import SequenceMatcher
 
 
 # ============================================================
-# COLLEGE CONFESSION CHATBOT
+# INTENTS
 # ============================================================
 
 INTENTS = {
@@ -13,34 +13,35 @@ INTENTS = {
     # --------------------------------------------------------
     # GREETING
     # --------------------------------------------------------
+
     "greeting": {
         "keywords": [
-            "hello", "hi", "hey", "hai", "hii", "hiii",
-            "morning", "evening", "afternoon"
+            "hi",
+            "hello",
+            "hey",
+            "hii",
+            "hiii",
+            "goodmorning",
+            "goodafternoon",
+            "goodevening"
         ],
 
         "examples": [
-            "hello",
             "hi",
+            "hello",
             "hey",
-            "hey there",
             "hi there",
-            "hii",
-            "hiii",
-            "hai",
             "hello chatbot",
-            "hi bot",
-            "hey bot",
+            "hey chatbot",
             "good morning",
             "good afternoon",
             "good evening"
         ],
 
         "responses": [
-            "Hello! 👋 How can I help you?",
-            "Hi! 😊 What can I help you with?",
-            "Hey! 👋 I'm your College Confession Assistant.",
-            "Hello! Feel free to ask me anything about the confession website."
+            "Hello! 👋 How can I help you with the college confession page?",
+            "Hi! 😊 You can ask me about posting confessions, privacy, reporting, deleting posts, or the website.",
+            "Hey! 👋 How can I help you today?"
         ]
     },
 
@@ -48,39 +49,33 @@ INTENTS = {
     # --------------------------------------------------------
     # POST CONFESSION
     # --------------------------------------------------------
+
     "post_confession": {
         "keywords": [
-            "post", "submit", "send", "share",
-            "confession", "write", "publish",
-            "upload", "create"
+            "post",
+            "submit",
+            "share",
+            "write",
+            "publish",
+            "confession",
+            "confess"
         ],
 
         "examples": [
-            "How do I post a confession?",
-            "Where can I submit a confession?",
-            "I want to share a confession",
-            "How can I post something?",
-            "I want to write a confession",
-            "How do I submit my confession?",
-            "Where do I write my confession?",
-            "Can I post something?",
-            "Can I share my thoughts?",
-            "I want to submit a post",
-            "How can I share a post?",
-            "Where can I publish my confession?",
-            "How do I create a confession?",
-            "I want to tell my story",
-            "I want to share something",
-            "How can I send my confession?",
-            "Where can I post?",
-            "I want to submit something"
+            "how do I post a confession",
+            "how can I post a confession",
+            "how to submit a confession",
+            "where can I post my confession",
+            "I want to post a confession",
+            "how can I share my confession",
+            "how do I submit a post",
+            "how can I write a confession"
         ],
 
         "responses": [
-            "You can submit your confession using the confession form on the website.",
-            "To share a confession, open the confession submission section and write your message.",
-            "Sure! You can share your thoughts by submitting a confession through the website.",
-            "Want to post something? Go to the confession submission section and enter your message."
+            "To post a confession, go to the confession section and submit your message using the available form. 📝",
+            "You can share your confession through the confession submission section of the website.",
+            "Simply open the confession submission form, write your message, and submit it."
         ]
     },
 
@@ -88,37 +83,34 @@ INTENTS = {
     # --------------------------------------------------------
     # ANONYMITY / PRIVACY
     # --------------------------------------------------------
+
     "anonymity": {
         "keywords": [
-            "anonymous", "anonymity", "identity",
-            "name", "private", "privacy",
-            "secret", "hidden", "visible"
+            "anonymous",
+            "anonymity",
+            "private",
+            "privacy",
+            "identity",
+            "name",
+            "secret"
         ],
 
         "examples": [
-            "Is my confession anonymous?",
-            "Will people know my name?",
-            "Can others see my identity?",
-            "Is my identity hidden?",
-            "Will my name be shown?",
-            "Can people find out who posted?",
-            "Is this anonymous?",
-            "Will my identity be revealed?",
-            "Can anyone see my name?",
-            "Is my confession private?",
-            "Will others know it is me?",
-            "Can my friends know who posted?",
-            "Does the confession show my name?",
-            "Is my post private?",
-            "Can people see who submitted it?",
-            "Will everyone know who posted this?",
-            "Is my identity safe?"
+            "is my confession anonymous",
+            "will my name be shown",
+            "is this anonymous",
+            "can people see my identity",
+            "will my identity be hidden",
+            "is my identity private",
+            "can I post anonymously",
+            "will my name be visible",
+            "does anyone know who posted"
         ],
 
         "responses": [
-            "The public confession should not display your identity. Check the website's privacy rules for the exact details.",
-            "Privacy is important for confessions. The public post is intended to be separate from your identity.",
-            "Your identity and privacy depend on how the website's submission system is configured. Check the privacy information before posting."
+            "Yes, the confession page is designed to allow users to share their thoughts without publicly revealing their identity. 🔒",
+            "Your identity should remain private when posting an anonymous confession.",
+            "You can share a confession anonymously without displaying your name publicly."
         ]
     },
 
@@ -126,32 +118,29 @@ INTENTS = {
     # --------------------------------------------------------
     # DELETE CONFESSION
     # --------------------------------------------------------
+
     "delete_confession": {
         "keywords": [
-            "delete", "remove", "erase",
-            "confession", "post", "clear"
+            "delete",
+            "remove",
+            "erase",
+            "removeconfession"
         ],
 
         "examples": [
-            "How can I delete my confession?",
-            "I want to remove my post",
-            "Can I delete a confession?",
-            "How do I remove my confession?",
+            "how do I delete my confession",
+            "can I delete my confession",
+            "how can I remove my confession",
             "I want to delete my post",
-            "Can I remove something I posted?",
-            "How can I erase my confession?",
-            "I posted something by mistake",
-            "Can I remove my confession?",
-            "I want to take down my post",
-            "I don't want my confession anymore",
-            "Can my confession be removed?",
-            "How do I delete something I posted?"
+            "can I remove a confession",
+            "how do I remove my post",
+            "delete my confession"
         ],
 
         "responses": [
-            "If you want to remove a confession, use the available delete option or contact the website administrator.",
-            "Posted something by mistake? Check whether a delete option is available, or contact the administrator.",
-            "You can request removal of a confession from the website administrator if a delete option isn't available."
+            "If you want to remove a confession, use the available delete option or contact the page administrator for assistance.",
+            "You can request the removal of your confession through the website administrator.",
+            "If your confession needs to be deleted, please use the available removal option or contact the administrator."
         ]
     },
 
@@ -159,35 +148,33 @@ INTENTS = {
     # --------------------------------------------------------
     # REPORT CONFESSION
     # --------------------------------------------------------
+
     "report_confession": {
         "keywords": [
-            "report", "abuse", "offensive",
-            "spam", "inappropriate", "bad",
-            "harmful", "fake"
+            "report",
+            "abuse",
+            "offensive",
+            "inappropriate",
+            "harassment",
+            "spam",
+            "fake"
         ],
 
         "examples": [
-            "How do I report a confession?",
-            "I want to report a post",
-            "This confession is inappropriate",
-            "How can I report spam?",
-            "I found an offensive post",
-            "How do I report something?",
-            "Can I report a confession?",
-            "Where can I report a post?",
-            "This post is bad",
-            "Someone posted something inappropriate",
-            "I want to report this confession",
-            "How can I report abuse?",
-            "This is spam",
-            "I found a harmful confession",
-            "Where is the report option?"
+            "how do I report a confession",
+            "how can I report a post",
+            "I want to report a confession",
+            "where can I report inappropriate content",
+            "how do I report offensive content",
+            "can I report a post",
+            "this confession is inappropriate",
+            "how to report spam"
         ],
 
         "responses": [
-            "You can report inappropriate or harmful content using the report option provided on the website.",
-            "If you find a confession inappropriate, use the report option so it can be reviewed.",
-            "You can report spam, offensive or inappropriate content through the website's reporting option."
+            "If you find inappropriate or offensive content, please use the report option to notify the administrator.",
+            "You can report inappropriate content through the reporting option on the website.",
+            "If a confession violates the page rules, please report it so that it can be reviewed."
         ]
     },
 
@@ -195,33 +182,32 @@ INTENTS = {
     # --------------------------------------------------------
     # ABOUT WEBSITE
     # --------------------------------------------------------
+
     "about_website": {
         "keywords": [
-            "website", "site", "purpose",
-            "about", "college", "confession",
-            "platform", "app"
+            "website",
+            "site",
+            "purpose",
+            "platform",
+            "app"
         ],
 
         "examples": [
-            "What is this website?",
-            "What is this site about?",
-            "What is the purpose of this website?",
-            "Tell me about the confession page",
-            "What is this platform?",
-            "Why was this website created?",
-            "What can I do on this website?",
-            "What is the confession page?",
-            "Tell me about this site",
-            "How does this website work?",
-            "What is this app?",
-            "Why do we have this website?",
-            "What is the purpose of this page?"
+            "what is this website",
+            "what is this site",
+            "what is this platform",
+            "what is this page",
+            "what does this website do",
+            "what is the purpose of this website",
+            "tell me about this website",
+            "how does this website work",
+            "what is this confession page"
         ],
 
         "responses": [
-            "This is a college confession platform where students can share their thoughts, experiences and confessions.",
-            "The website allows college students to share confessions and thoughts with the college community.",
-            "It's a platform designed for students to express their thoughts and experiences through confessions."
+            "This website is a college confession platform where students can share their thoughts and experiences.",
+            "This page allows college students to share confessions and thoughts with the community.",
+            "The purpose of this website is to provide students with a platform to express themselves through confessions."
         ]
     },
 
@@ -229,31 +215,29 @@ INTENTS = {
     # --------------------------------------------------------
     # HELP
     # --------------------------------------------------------
+
     "help": {
         "keywords": [
-            "help", "options", "assist",
-            "support", "guide"
+            "help",
+            "support",
+            "guide",
+            "options"
         ],
 
         "examples": [
-            "What can you help me with?",
-            "What can I ask you?",
-            "I need help",
-            "Show me what you can do",
-            "Can you help me?",
-            "How can you help?",
-            "What are your options?",
-            "I need some help",
-            "Help me",
-            "What questions can I ask?",
-            "What can you do?",
-            "How do you help?"
+            "help me",
+            "what can you do",
+            "how can you help me",
+            "what can I ask",
+            "give me some help",
+            "what are the options",
+            "I need help"
         ],
 
         "responses": [
-            "I can help you with posting confessions, privacy, deleting or reporting posts, and information about this website.",
-            "You can ask me about posting a confession, anonymity, deleting a post, reporting content, or the website.",
-            "I'm here to help! Ask me about confessions, privacy, reports, deleting posts, or the website."
+            "Sure! 😊 I can help you with posting a confession, privacy, deleting a confession, reporting content, and information about this website.",
+            "I can help you understand how the college confession page works.",
+            "You can ask me about confessions, privacy, reporting, deleting posts, or the website."
         ]
     },
 
@@ -261,79 +245,59 @@ INTENTS = {
     # --------------------------------------------------------
     # THANKS
     # --------------------------------------------------------
+
     "thanks": {
         "keywords": [
-            "thanks", "thank", "thankyou",
-            "appreciate", "helpful"
+            "thanks",
+            "thank",
+            "thankyou",
+            "thx"
         ],
 
         "examples": [
             "thanks",
             "thank you",
-            "thanks a lot",
             "thankyou",
+            "thanks a lot",
             "thank you so much",
-            "that was helpful",
-            "thanks for helping",
-            "appreciate it",
-            "very helpful",
-            "thank you so much",
-            "thanks bot",
-            "thank you bot"
+            "thx"
         ],
 
         "responses": [
             "You're welcome! 😊",
-            "No problem! Happy to help. 👍",
-            "You're welcome! Feel free to ask anything else.",
-            "Glad I could help! 😊"
+            "No problem! Happy to help. 😊",
+            "You're most welcome!"
         ]
     },
 
 
     # --------------------------------------------------------
-    # OK / YES / CONFIRMATION
+    # CONFIRMATION
     # --------------------------------------------------------
+
     "confirmation": {
         "keywords": [
-            "ok", "okay", "okk", "okayy",
-            "yes", "yeah", "yep", "yaa", "ya",
-            "sure", "alright", "fine",
-            "cool", "nice", "great"
-        ],
-
-        "examples": [
-            "ok",
-            "okay",
-            "okk",
-            "okayy",
-            "okayyy",
             "yes",
             "yeah",
             "yep",
-            "yaa",
-            "ya",
             "sure",
-            "alright",
-            "fine",
-            "cool",
-            "nice",
-            "great",
-            "okay thanks",
-            "yes please",
-            "yeah sure",
-            "yaa okay",
-            "ok fine",
-            "cool thanks",
-            "nice"
+            "okay",
+            "ok"
+        ],
+
+        "examples": [
+            "yes",
+            "yeah",
+            "yep",
+            "sure",
+            "okay",
+            "ok"
         ],
 
         "responses": [
-            "Okay! 😊",
-            "Sure! 👍",
+            "Great! 😊",
             "Alright!",
-            "Great! How can I help you next?",
-            "Got it! 😊"
+            "Sure! 👍"
         ]
     },
 
@@ -341,10 +305,13 @@ INTENTS = {
     # --------------------------------------------------------
     # GOODBYE
     # --------------------------------------------------------
+
     "goodbye": {
         "keywords": [
-            "bye", "goodbye", "exit",
-            "quit", "later"
+            "bye",
+            "goodbye",
+            "see",
+            "later"
         ],
 
         "examples": [
@@ -352,36 +319,32 @@ INTENTS = {
             "goodbye",
             "see you",
             "see you later",
-            "I have to go",
-            "talk to you later",
-            "bye bye",
-            "good night",
-            "see ya",
-            "bye bot"
+            "bye chatbot",
+            "goodbye chatbot"
         ],
 
         "responses": [
-            "Goodbye! 👋 Have a great day!",
-            "See you later! 👋",
-            "Bye! 😊 Take care!"
+            "Goodbye! 👋",
+            "See you later! 😊",
+            "Take care! 👋"
         ]
     }
 }
 
 
 # ============================================================
-# CLEAN USER MESSAGE
+# TEXT CLEANING
 # ============================================================
 
 def clean_text(text):
     """
-    Convert the user's message into a simple format.
+    Convert text into a simple normalized form.
     """
 
     text = text.lower()
 
     # Remove punctuation
-    text = re.sub(r"[^a-z0-9\s]", "", text)
+    text = re.sub(r"[^\w\s]", "", text)
 
     # Remove extra spaces
     text = re.sub(r"\s+", " ", text).strip()
@@ -390,38 +353,58 @@ def clean_text(text):
 
 
 # ============================================================
-# TEXT SIMILARITY
+# SIMILARITY
 # ============================================================
 
 def similarity(text1, text2):
     """
-    Compare two sentences and return a similarity score.
+    Calculate similarity between two strings.
+    Returns a value between 0 and 1.
     """
 
-    return SequenceMatcher(None, text1, text2).ratio()
+    return SequenceMatcher(
+        None,
+        text1,
+        text2
+    ).ratio()
 
 
 # ============================================================
-# DETECT INTENT
+# INTENT DETECTION
 # ============================================================
 
 def detect_intent(message):
     """
     Find the most suitable intent for the user's message.
+
+    The chatbot checks:
+    1. Matching keywords
+    2. Similarity with example questions
+
+    If the message appears unrelated to the chatbot,
+    it returns None.
     """
 
     message = clean_text(message)
+
+    # Empty message
+    if not message:
+        return None
 
     words = set(message.split())
 
     best_intent = None
     best_score = 0
 
+    best_keyword_matches = 0
+    best_example_score = 0
+
+    # Check every intent
     for intent, data in INTENTS.items():
 
-        # ---------------------------------------------
-        # Check matching keywords
-        # ---------------------------------------------
+        # ----------------------------------------------------
+        # Keyword matching
+        # ----------------------------------------------------
 
         keyword_matches = len(
             words.intersection(data["keywords"])
@@ -429,10 +412,9 @@ def detect_intent(message):
 
         keyword_score = keyword_matches * 0.15
 
-
-        # ---------------------------------------------
-        # Compare message with example questions
-        # ---------------------------------------------
+        # ----------------------------------------------------
+        # Example similarity
+        # ----------------------------------------------------
 
         example_score = 0
 
@@ -440,112 +422,255 @@ def detect_intent(message):
 
             example = clean_text(example)
 
-            score = similarity(message, example)
+            score = similarity(
+                message,
+                example
+            )
 
             if score > example_score:
                 example_score = score
 
-
-        # ---------------------------------------------
-        # Calculate final score
-        # ---------------------------------------------
+        # ----------------------------------------------------
+        # Final score
+        # ----------------------------------------------------
 
         final_score = keyword_score + example_score
 
-
-        # ---------------------------------------------
+        # ----------------------------------------------------
         # Store best intent
-        # ---------------------------------------------
+        # ----------------------------------------------------
 
         if final_score > best_score:
 
             best_score = final_score
             best_intent = intent
+            best_keyword_matches = keyword_matches
+            best_example_score = example_score
 
+    # ========================================================
+    # IMPORTANT:
+    # Reject unrelated questions
+    # ========================================================
 
-    # ---------------------------------------------
-    # Confidence check
-    # ---------------------------------------------
-
-    if best_score < 0.35:
-
+    # If no keywords match, the message must be highly
+    # similar to one of our known examples.
+    if (
+        best_keyword_matches == 0
+        and best_example_score < 0.65
+    ):
         return None
 
+    # General confidence check
+    if best_score < 0.35:
+        return None
 
     return best_intent
 
 
 # ============================================================
-# GET RESPONSE
+# RESPONSE GENERATOR
 # ============================================================
 
 def get_response(message):
-    """
-    Generate a response for the user's message.
-    """
 
     intent = detect_intent(message)
 
-    # If chatbot doesn't understand
+    # --------------------------------------------------------
+    # Unknown / unrelated question
+    # --------------------------------------------------------
+
     if intent is None:
 
         return (
-            "I'm not sure I understood that. 🤔\n"
-            "You can ask me about posting a confession, "
-            "privacy, deleting a post, reporting content, "
-            "or the confession website."
+            "I'm sorry, but that doesn't seem to be related "
+            "to this page. 😊\n\n"
+            "I'm here to help with the college confession "
+            "website. You can ask me about posting a "
+            "confession, privacy, deleting a post, reporting "
+            "content, or how the website works."
         )
 
-    # Select a random response
+    # --------------------------------------------------------
+    # Get random response
+    # --------------------------------------------------------
+
     return random.choice(
         INTENTS[intent]["responses"]
     )
 
 
 # ============================================================
-
-# ============================================================
-# STREAMLIT WEB APP
+# STREAMLIT CONFIGURATION
 # ============================================================
 
 st.set_page_config(
-    page_title="College Confession Assistant",
+    page_title="College Confession Chatbot",
     page_icon="💬",
     layout="centered"
 )
 
-st.title("💬 College Confession Assistant")
-st.write("Ask me anything about the confession website!")
 
-# Store chat history
+# ============================================================
+# CUSTOM CSS
+# ============================================================
+
+st.markdown(
+    """
+    <style>
+
+    /* Main page */
+
+    .stApp {
+        background-color: #f5f3ff;
+    }
+
+
+    /* Title */
+
+    .main-title {
+        text-align: center;
+        color: #4c1d95;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+
+    /* Subtitle */
+
+    .subtitle {
+        text-align: center;
+        color: #6b7280;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+
+    /* Chat container */
+
+    .chat-box {
+        background-color: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    }
+
+
+    /* Welcome box */
+
+    .welcome {
+        background-color: #ede9fe;
+        padding: 15px;
+        border-radius: 12px;
+        color: #4c1d95;
+        margin-bottom: 20px;
+    }
+
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# ============================================================
+# TITLE
+# ============================================================
+
+st.markdown(
+    '<div class="main-title">💬 College Confession Chatbot</div>',
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    '<div class="subtitle">Your friendly assistant for the college confession page</div>',
+    unsafe_allow_html=True
+)
+
+
+# ============================================================
+# WELCOME MESSAGE
+# ============================================================
+
 if "messages" not in st.session_state:
-    st.session_state.messages = []
 
-# Display previous messages
+    st.session_state.messages = [
+
+        {
+            "role": "assistant",
+            "content": (
+                "Hello! 👋 Welcome to the College Confession "
+                "Chatbot.\n\n"
+                "I can help you with posting confessions, "
+                "privacy, deleting posts, reporting content, "
+                "and information about this website."
+            )
+        }
+
+    ]
+
+
+# ============================================================
+# DISPLAY PREVIOUS MESSAGES
+# ============================================================
+
 for message in st.session_state.messages:
+
     with st.chat_message(message["role"]):
-        st.write(message["content"])
 
-# Chat input
-user_message = st.chat_input("Type your message...")
+        st.markdown(
+            message["content"]
+        )
 
-if user_message:
-    # Save and display user message
-    st.session_state.messages.append({
-        "role": "user",
-        "content": user_message
-    })
 
+# ============================================================
+# USER INPUT
+# ============================================================
+
+user_input = st.chat_input(
+    "Type your message here..."
+)
+
+
+# ============================================================
+# PROCESS USER MESSAGE
+# ============================================================
+
+if user_input:
+
+    # Add user message
+    st.session_state.messages.append(
+        {
+            "role": "user",
+            "content": user_input
+        }
+    )
+
+    # Display user message
     with st.chat_message("user"):
-        st.write(user_message)
 
-    # Generate and display bot response
-    response = get_response(user_message)
+        st.markdown(
+            user_input
+        )
 
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": response
-    })
 
+    # Generate chatbot response
+    response = get_response(
+        user_input
+    )
+
+
+    # Add assistant response
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": response
+        }
+    )
+
+
+    # Display chatbot response
     with st.chat_message("assistant"):
-        st.write(response)
+
+        st.markdown(
+            response
+        )
