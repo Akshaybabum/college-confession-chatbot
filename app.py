@@ -104,7 +104,7 @@ INTENTS = {
             "is my identity private",
             "can I post anonymously",
             "will my name be visible",
-            "does anyone know who posted"
+            "does anyone know who posted",
             " is it safe "
         ],
 
