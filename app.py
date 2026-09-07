@@ -105,6 +105,7 @@ INTENTS = {
             "can I post anonymously",
             "will my name be visible",
             "does anyone know who posted"
+            " is it safe "
         ],
 
         "responses": [
